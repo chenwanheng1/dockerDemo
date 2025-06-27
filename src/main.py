@@ -3,5 +3,5 @@ import numpy as np
 import os
 if __name__ == '__main__':
     # 在logs目录下创建个名为docker.log的空文件，验证容器和宿主机是否能进行数据同步
-    os.mknod('../logs/docker.log')
+    os.mknod(os.path.abspath('..') + '/logs/docker.log')
     print("hello docker")
