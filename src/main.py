@@ -3,5 +3,8 @@
 import os
 if __name__ == '__main__':
     # 在logs目录下创建个名为docker.log的空文件，验证容器和宿主机是否能进行数据同步
-    os.mknod(os.path.abspath('..') + '/logs/docker.log')
-    print("hello docker")
+    log_file = os.path.abspath('..') + '/logs/docker.log'
+    log_entry = "hello docker"
+    with open(log_file,"a", encoding="utf-8") as log_f:
+        log_f.write(log_entry)
+    print(log_entry)
