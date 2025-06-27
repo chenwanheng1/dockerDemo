@@ -11,4 +11,5 @@ if __name__ == '__main__':
     log_entry = "hello docker"
     with open(log_file,"a", encoding="utf-8") as log_f:
         log_f.write(log_entry)
+        log_f.close()
     print(log_entry)
