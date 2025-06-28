@@ -1,9 +1,10 @@
 FROM python:3.6
 
-WORKDIR ./dockerDemo
+ADD . /code
 
-ADD . .
+WORKDIR /code
+
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "./src/main.py"]
+CMD ["python", "/code/src/main.py"]
