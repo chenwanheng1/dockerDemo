@@ -4,7 +4,6 @@ ADD . /code
 
 WORKDIR /code
 
-
 RUN pip install -r requirements.txt
 
-CMD ["python", "/code/src/main.py"]
+CMD ["python", "/code/src/test.py"]
