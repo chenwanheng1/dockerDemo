@@ -9,10 +9,11 @@ if __name__ == '__main__':
     log_file = Path(__file__).resolve().parent.parent / 'logs/dockerTest.log'
     try:
         while True:
-            log_entry = f"[{time.ctime()}] hello"
+            log_entry = f"\n[{time.ctime()}] hello"
             with open(log_file,"a", encoding="utf-8") as log_f:
                 log_f.write(log_entry)
                 log_f.close()
+            print(log_entry)
             time.sleep(10)
     except PermissionError:
         print(f"[{time.ctime()}] 日志文件操作权限不足")
